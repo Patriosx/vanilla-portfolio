@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 100vh;
 }
 
 /* GENERAL */
@@ -33,8 +34,8 @@ li {
   display: -ms-grid;
   display: grid;
   height: 100vh;
-  -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
+  -ms-grid-rows: auto 90%;
+      grid-template-rows: auto 90%;
 }
 
 .nav-container {
@@ -63,6 +64,7 @@ li {
 }
 
 .nav-container .nav a {
+  font-size: 0.8rem;
   padding: 0 0.6em;
 }
 
