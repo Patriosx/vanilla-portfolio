@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+:root {
+  --nav-color: #1b2f64;
+  --nav-text: rgb(230, 230, 230);
+  --hero-subtitle: #b787b1;
+  --hero-body: #365293;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* GENERAL */
+a, a:active, a:hover, a:visited {
+  text-decoration: none;
+  color: var(--nav-text);
+}
+
+li {
+  list-style-type: none;
+}
+
+/**** HERO PAGE ****/
+/* NAV */
+.hero-container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-rows: 6rem 1fr;
+      grid-template-rows: 6rem 1fr;
+}
+
+header {
+  color: var(--nav-text);
+  background-color: var(--nav-color);
+}
+
+header .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  height: 100%;
+}
+
+header .nav-logo {
+  font-weight: 600;
+}
+
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .nav li {
+  margin-right: 0.8em;
+}
+
+.social,
+.hero-design {
+  display: none;
+}
+
+/* HERO BODY */
+.hero-body {
+  background-color: var(--hero-body);
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  padding: 4rem;
+}
+
+.hero-body .hero-text {
+  color: white;
+}
+
+.hero-body .hero-text h1 {
+  font-size: 3.2rem;
+  text-align: left;
+}
+
+.hero-body .hero-text h2 a {
+  color: var(--hero-subtitle);
+  padding-bottom: 2px;
+  border-bottom: 2px solid #1b2f64;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=main.css.map */
