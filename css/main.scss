@@ -9,11 +9,14 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: inherit;
 }
+
 body {
   font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
   height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
 }
 /* GENERAL */
 // Variables par selectores con sass
@@ -27,6 +30,27 @@ li {
 }
 img {
   width: 100%;
+}
+
+button {
+  position: relative;
+  font-size: 0.8rem;
+  background: var(--nav-color);
+  border: 1px solid white;
+  padding: 1rem;
+  color: white;
+  box-shadow: 4px 4px 0px 0px var(--hero-body);
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+  left: 0;
+  top: -104px;
+}
+button:hover {
+  left: 4px;
+  top: -100px;
+  box-shadow: 0 0 0 0 white;
 }
 /**** HERO PAGE ****/
 /* NAV */
@@ -42,7 +66,7 @@ img {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1.8rem;
   }
   .nav-logo {
     font-weight: 600;
@@ -53,8 +77,8 @@ img {
     }
     a {
       // display: block;
-      font-size: 0.8rem;
-      padding: 0 0.6em;
+      font-size: 0.9rem;
+      padding: 0 0.4em;
     }
   }
 }
@@ -68,9 +92,8 @@ img {
   background-color: var(--hero-body);
   text-align: center;
   display: grid;
-  padding: 4rem;
   .hero-text {
-    margin-top: 3rem;
+    margin-top: 5rem;
     color: white;
     text-align: center;
     letter-spacing: 2px;
@@ -110,6 +133,9 @@ section {
     // color: var(--color-1);
     color: var(--hero-body);
   }
+  .project-comp {
+    color: var(--color-1);
+  }
   .project-title {
     margin-top: -0.4rem;
   }
@@ -119,6 +145,7 @@ section {
     line-height: 1.6rem;
   }
 }
+/*
 .projects::before {
   content: "";
   position: absolute;
@@ -138,4 +165,37 @@ section {
   left: 0;
   z-index: -1;
   background-color: var(--color-1);
+}
+*/
+/*Project 2*/
+.project {
+  margin-top: 4rem;
+}
+
+/* SKILLS SECTION */
+.skills {
+  background-color: #b787b1;
+  .skills-container {
+    ul {
+      li {
+        background: white;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+  .icon-container {
+    height: 80px;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+
+    &.icon {
+      width: 80px;
+    }
+  }
+}
+.skill-title {
+  font-weight: bold;
 }
