@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
 :root {
   --nav-color: #1b2f64;
+  --nav-color2: rgb(31, 53, 114);
   --nav-text: rgb(230, 230, 230);
   --hero-subtitle: #b787b1;
   --hero-body: #365293;
@@ -36,29 +37,34 @@ img {
   width: 100%;
 }
 
-button {
+.btn {
   position: relative;
   font-size: 0.8rem;
-  background: var(--nav-color);
+  background: transparent;
   border: 1px solid white;
-  padding: 1rem;
+  padding: 0.6rem;
   color: white;
-  -webkit-box-shadow: 4px 4px 0px 0px var(--hero-body);
-          box-shadow: 4px 4px 0px 0px var(--hero-body);
+  -webkit-box-shadow: 4px 4px 0px 0px #929292;
+          box-shadow: 4px 4px 0px 0px #929292;
   font-weight: 700;
   letter-spacing: 5px;
   text-transform: uppercase;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   left: 0;
-  top: -104px;
+  top: 0;
 }
 
-button:hover {
+.btn:hover {
   left: 4px;
-  top: -100px;
+  top: 4px;
   -webkit-box-shadow: 0 0 0 0 white;
           box-shadow: 0 0 0 0 white;
+}
+
+button {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 /**** HERO PAGE ****/
@@ -83,7 +89,7 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.8rem;
+  padding: 2rem;
 }
 
 .nav-container .nav-logo {
@@ -108,14 +114,14 @@ button:hover {
 
 /* HERO BODY */
 .hero-body {
-  background-color: var(--hero-body);
+  background-color: var(--nav-color2);
   text-align: center;
   display: -ms-grid;
   display: grid;
 }
 
 .hero-body .hero-text {
-  margin-top: 5rem;
+  padding-top: 8rem;
   color: white;
   text-align: center;
   letter-spacing: 2px;
@@ -150,6 +156,29 @@ section {
 
 .projects {
   position: relative;
+  /*
+  button {
+    position: relative;
+    font-size: 0.8rem;
+    background: var(--color-1r);
+    border: 1px solid white;
+    padding: 1rem;
+    color: white;
+    // box-shadow: 4px 4px 0px 0px var(--hero-body);
+    box-shadow: 4px 4px 0px 0px white;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    left: 0;
+    top: -84px;
+  }
+  button:hover {
+    left: 4px;
+    top: -80px;
+    box-shadow: 0 0 0 0 white;
+  }
+  */
 }
 
 .projects .projects-title {
@@ -158,6 +187,10 @@ section {
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--hero-body);
+}
+
+.projects .block-1 a {
+  visibility: hidden;
 }
 
 .projects .project-comp {
@@ -196,36 +229,152 @@ section {
   background-color: var(--color-1);
 }
 */
-/*Project 2*/
-.project {
-  margin-top: 4rem;
-}
-
 /* SKILLS SECTION */
 .skills {
   background-color: #b787b1;
 }
 
-.skills .skills-container ul li {
+.skills .skills-title {
+  padding: 1rem 0 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--hero-body);
+}
+
+.skills .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills .icon-container {
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
   background: white;
   padding: 2rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
 }
 
-.skills .icon-container {
-  height: 80px;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  margin: 0 auto;
-}
-
 .skills .icon-container.icon {
-  width: 80px;
+  width: 140px;
 }
 
-.skill-title {
-  font-weight: bold;
+.skills .icon-container.icon2 {
+  width: 150px;
+}
+
+.skills .icon-container.icon3 {
+  width: 250px;
+}
+
+.backend {
+  background-color: white;
+}
+
+/* MEDIA QUERY*/
+@media only screen and (min-width: 680px) {
+  .hero-text {
+    padding: 6rem;
+  }
+  .projects img {
+    width: 80%;
+  }
+  .projects .project {
+    margin-top: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% auto;
+        grid-template-columns: 40% auto;
+  }
+  .projects .block-1 {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .projects .block-1 a {
+    visibility: visible;
+    background-color: var(--hero-body);
+  }
+  .projects button {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1033px) {
+  .nav-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    background: unset;
+  }
+  .nav-container header {
+    background: var(--nav-color);
+    padding: 2em 2em 2em 4em;
+  }
+  .nav-container .nav ul {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .skills-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .skills-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  section {
+    padding: 4rem;
+  }
+  .social {
+    display: block;
+  }
+  .social ul {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    float: right;
+    padding: 2rem;
+  }
+  .social img {
+    width: 40px;
+  }
+  .hero-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    background: unset;
+  }
+  .hero-body .hero-text {
+    background: var(--nav-color2);
+    text-align: left;
+  }
+  .hero-body .hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2em;
+  }
+  .hero-design {
+    display: unset;
+    margin-left: -34.5%;
+    margin-top: 0%;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
