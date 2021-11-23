@@ -17,7 +17,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -72,9 +71,9 @@ button {
 .hero-container {
   display: -ms-grid;
   display: grid;
-  height: 100vh;
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
+  height: 100vh;
 }
 
 .nav-container {
@@ -152,33 +151,11 @@ button {
 section {
   padding: 4em 2em;
   text-align: center;
+  display: block;
 }
 
 .projects {
   position: relative;
-  /*
-  button {
-    position: relative;
-    font-size: 0.8rem;
-    background: var(--color-1r);
-    border: 1px solid white;
-    padding: 1rem;
-    color: white;
-    // box-shadow: 4px 4px 0px 0px var(--hero-body);
-    box-shadow: 4px 4px 0px 0px white;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    transition: all 300ms ease-in-out;
-    left: 0;
-    top: -84px;
-  }
-  button:hover {
-    left: 4px;
-    top: -80px;
-    box-shadow: 0 0 0 0 white;
-  }
-  */
 }
 
 .projects .projects-title {
@@ -309,11 +286,14 @@ section {
 }
 
 @media only screen and (min-width: 1033px) {
+  .hero-container {
+    min-height: 580px;
+  }
   .nav-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 66% auto;
-        grid-template-columns: 66% auto;
+    -ms-grid-columns: 65% auto;
+        grid-template-columns: 65% auto;
     background: unset;
   }
   .nav-container header {
@@ -358,8 +338,8 @@ section {
   .hero-body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 66% auto;
-        grid-template-columns: 66% auto;
+    -ms-grid-columns: 65% auto;
+        grid-template-columns: 65% auto;
     background: unset;
   }
   .hero-body .hero-text {
@@ -372,7 +352,7 @@ section {
   }
   .hero-design {
     display: unset;
-    margin-left: -34.5%;
+    margin-left: -33.5%;
     margin-top: 0%;
     width: 100%;
   }
