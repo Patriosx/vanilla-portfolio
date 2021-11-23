@@ -226,7 +226,9 @@ section {
   color: var(--hero-body);
 }
 
-.skills .skills-container {
+.skills .frontend-container,
+.skills .backend-container,
+.skills .others-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,23 +345,23 @@ section {
     font-size: 3rem;
     line-height: 1.2em;
   }
-  .hero-body .skills-container {
+  .hero-body .hero-design {
+    margin-left: -50.4%;
+    margin-top: 15%;
+    width: 100%;
+  }
+  .skills-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  .hero-body .skills-container {
+  .skills-container {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .hero-body section {
+  section {
     padding: 4rem;
-  }
-  .hero-design {
-    margin-left: -50.4%;
-    margin-top: 15%;
-    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
