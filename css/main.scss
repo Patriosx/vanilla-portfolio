@@ -12,12 +12,25 @@
   margin: 0;
   box-sizing: inherit;
 }
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1; /* triggers hasLayout */
+}
 
-body {
+body,
+html {
   font-family: "Poppins", sans-serif;
-  // height: 100vh;
+  height: 100%;
   box-sizing: border-box;
-  width: 100%;
+  // width: 100%;
+  // width: min-content;
+  display: grid;
 }
 /* GENERAL */
 // Variables par selectores con sass
@@ -61,9 +74,9 @@ button {
 /**** HERO PAGE ****/
 /* NAV */
 .hero-container {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100vh;
+  // display: grid;
+  // grid-template-rows: auto 1fr;
+  // height: 100%;
 }
 .nav-container {
   color: var(--nav-text);
@@ -95,6 +108,8 @@ button {
 
 /* HERO BODY */
 .hero-body {
+  height: 90vh;
+  min-height: 400px;
   background-color: var(--nav-color2);
   text-align: center;
   display: grid;
@@ -130,7 +145,7 @@ section {
   display: block;
 }
 .projects {
-  position: relative;
+  // position: relative;
 
   .projects-title {
     text-transform: uppercase;
@@ -263,8 +278,7 @@ section {
 }
 @media only screen and (min-width: 1033px) {
   .hero-container {
-    min-height: 580px;
-    // overflow: visible;
+    overflow: hidden;
   }
   .nav-container {
     display: grid;
@@ -279,16 +293,7 @@ section {
       justify-content: space-evenly;
     }
   }
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .skills-container {
-    flex-wrap: nowrap;
-  }
-  section {
-    padding: 4rem;
-  }
+
   .social {
     display: block;
     ul {
@@ -297,15 +302,16 @@ section {
       justify-content: space-between;
       float: right;
       padding: 2rem;
-    }
-    img {
-      width: 40px;
+      img {
+        width: 40px;
+      }
     }
   }
   .hero-body {
     display: grid;
     grid-template-columns: 65% auto;
     background: unset;
+    // min-height: 600px;
     .hero-text {
       background: var(--nav-color2);
       text-align: left;
@@ -315,11 +321,21 @@ section {
         line-height: 1.2em;
       }
     }
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .skills-container {
+      flex-wrap: nowrap;
+    }
+    section {
+      padding: 4rem;
+    }
   }
   .hero-design {
-    display: unset;
-    margin-left: -33.5%;
-    margin-top: 0%;
+    // display: unset;
+    margin-left: -50.4%;
+    margin-top: 15%;
     width: 100%;
   }
 }
