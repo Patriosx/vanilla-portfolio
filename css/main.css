@@ -32,10 +32,10 @@ body,
 html {
   font-family: "Poppins", sans-serif;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -ms-grid;
   display: grid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* GENERAL */
@@ -136,22 +136,17 @@ button {
   letter-spacing: 2px;
 }
 
-.hero-body .hero-text h1 {
-  font-size: 2.2rem;
-}
-
-.hero-body .hero-text h2 {
+.hero-body .hero-text h3 {
   margin-top: 2rem;
 }
 
-.hero-body .hero-text h2 a {
+.hero-body .hero-text h3 a {
   color: var(--hero-subtitle);
-  font-size: 1.2rem;
   padding-bottom: 2px;
   border-bottom: 2px solid #1b2f64;
 }
 
-.hero-body .hero-text h2 ion-icon {
+.hero-body .hero-text h3 ion-icon {
   -webkit-transform: translateY(0.4em);
           transform: translateY(0.4em);
   color: yellow;
@@ -159,32 +154,35 @@ button {
 
 /* SECTION 1: PROJECTS*/
 section {
-  padding: 4em 2em;
+  padding: 0 2em;
   text-align: center;
   display: block;
 }
 
-.projects .projects-title {
+.projects-container .projects-title {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.9rem;
   font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
   color: var(--hero-body);
 }
 
-.projects .block-1 a {
+.projects-container .projects .block-1 a {
   visibility: hidden;
 }
 
-.projects .project-comp {
+.projects-container .projects .project-comp {
   color: var(--color-1);
 }
 
-.projects .project-title {
+.projects-container .projects .project-title {
   margin-top: -0.4rem;
 }
 
-.projects .project-desc {
+.projects-container .projects .project-desc {
   margin-top: 0.4rem;
   color: #1c1c1c;
   line-height: 1.6rem;
@@ -266,27 +264,36 @@ section {
 
 /* MEDIA QUERY*/
 @media only screen and (min-width: 680px) {
+  header {
+    padding: 2rem 2rem 2rem 8rem;
+  }
   .hero-text {
     padding: 6rem;
+  }
+  .projects p {
+    margin-bottom: 1rem;
   }
   .projects img {
     width: 80%;
   }
   .projects .project {
-    margin-top: 2rem;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 40% auto;
-        grid-template-columns: 40% auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
-  .projects .block-1 {
+  .projects .project .block-1 {
     display: -ms-grid;
     display: grid;
     place-content: center;
+    padding: 2rem;
   }
-  .projects .block-1 a {
+  .projects .project .block-1 a {
     visibility: visible;
     background-color: var(--hero-body);
+  }
+  .projects .project .block-2 {
+    padding: 2rem;
   }
   .projects button {
     visibility: hidden;
@@ -306,7 +313,6 @@ section {
   }
   .nav-container header {
     background: var(--nav-color);
-    padding: 2em 2em 2em 4em;
   }
   .nav-container .nav ul {
     -webkit-box-pack: space-evenly;
@@ -328,7 +334,7 @@ section {
     padding: 2rem;
   }
   .social ul img {
-    width: 40px;
+    width: 30px;
   }
   .hero-body {
     display: -ms-grid;
@@ -362,6 +368,23 @@ section {
   }
   section {
     padding: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .projects {
+    padding: 1rem;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
+  .projects img {
+    height: 500px;
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */
