@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="script.js"></script>
     <title>Patricio RT</title>
   </head>
   <body>
@@ -13,28 +14,55 @@
         <header>
           <div class="nav-logo">Patricio RT</div>
           <div class="nav">
-            <ul>
-              <li><a href="">projects</a></li>
-              <li><a href="">about</a></li>
-              <li><a href="">contact</a></li>
+            <ul class="nav_links">
+              <li class="projects-menu">
+                <a href="#projects" class="nav-link">projects</a>
+              </li>
+              <li class="about-menu">
+                <a href="#about" class="nav-link">about</a>
+              </li>
+              <li class="contact-menu">
+                <a href="#contact" class="nav-link">contact</a>
+              </li>
             </ul>
           </div>
         </header>
         <div class="social">
           <ul>
-            <li><img src="./images/git.png" alt="" /></li>
-            <li><img src="./images/infojob.png" alt="" /></li>
-            <li><img src="./images/linkedin.png" alt="" /></li>
+            <li>
+              <a href="https://github.com/Patriosx" target="_blank">
+                <img src="./images/git.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.infojobs.net/patricio-rios-tapia.prf"
+                target="_blank"
+              >
+                <img src="./images/infojob.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://linkedin.com/in/patricio-ríos-tapia-7015b5204"
+                b
+                target="_blank"
+              >
+                <img src="./images/linkedin.png" alt="" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="hero-body">
         <div class="hero-text">
           <h1>Siempre en constante crecimiento</h1>
-          <h3>
-            <a href="">mira lo que hago </a>
-            <ion-icon name="chevron-down-outline"></ion-icon>
-          </h3>
+          <a href="#" class="scroll-to">
+            <h3>
+              <span>mira lo que hago</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+          </a>
         </div>
         <div class="hero-design">
           <svg width="596" height="500" viewBox="0 0 596 500" fill="none">
@@ -89,7 +117,7 @@
     </div>
 
     <!-- Section 1: Projects -->
-    <div class="projects-container">
+    <div class="projects-container" id="projects">
       <h1 class="projects-title">Proyectos</h1>
       <section class="projects">
         <div class="project-one project">
@@ -104,26 +132,42 @@
               href="https://github.com/Patriosx/blomia-frontend"
               target="_blank"
               class="btn"
+              title="Ir a Github"
               >frontend</a
             >
             <a
               href="https://github.com/Patriosx/blomia-backend"
               target="_blank"
               class="btn"
+              title="Ir a Github"
               >Backend</a
             >
             <a
               href="https://blomiaviveros.herokuapp.com/"
               target="_blank"
               class="btn"
+              title="Abrir demo de la App"
               >Demo</a
             >
           </div>
           <div class="block-2">
             <img src="./images/projects/blomia-login.png" alt="" />
           </div>
-          <button class="btn">Repo</button>
-          <button class="btn">Demo</button>
+          <button class="btn">
+            <a
+              href="https://github.com/Patriosx/blomia-frontend"
+              target="_blank"
+              >code</a
+            >
+          </button>
+          <button class="btn">
+            <a
+              href="https://blomiaviveros.herokuapp.com/"
+              target="_blank"
+              title="Abrir demo de la App"
+              >Demo</a
+            >
+          </button>
         </div>
 
         <div class="project-two project">
@@ -141,26 +185,40 @@
               href="https://github.com/Patriosx/omnifood"
               target="_blank"
               class="btn"
-              >Repo</a
+              title="Ir a Github"
+              >Code</a
             >
             <a
               href="https://omnifood-prt.netlify.app/"
               target="_blank"
               class="btn"
+              title="Abrir demo de la App"
               >Demo</a
             >
           </div>
           <div class="block-2">
             <img src="./images/projects/omnifood.png" alt="" />
           </div>
-          <button class="btn">Repo</button>
-          <button class="btn">Demo</button>
+          <button class="btn">
+            <a href="https://github.com/Patriosx/omnifood" target="_blank"
+              >code</a
+            >
+          </button>
+          <button class="btn">
+            <a href="https://omnifood-prt.netlify.app/" target="_blank">Demo</a>
+          </button>
         </div>
+      </section>
+    </div>
+    <!-- Section : about me -->
+    <div class="about-container" id="about">
+      <section class="about">
+        <h1>Este soy yo</h1>
       </section>
     </div>
 
     <!-- Section 2: Skills -->
-    <div class="skills-container">
+    <div class="skills-container" id="skills">
       <!-- SKILLS SECTION FRONTEND -->
       <section class="skills">
         <h1 class="skills-title">frontend</h1>
@@ -217,30 +275,31 @@
           <div class="icon-container icon2">
             <img
               src="./images/logos/backend/mongodb.png"
-              alt="CSS3"
-              title="CSS3"
+              alt="MongoDB"
+              title="MongoDB"
             />
           </div>
           <div class="icon-container icon3">
             <img
               src="./images/logos/backend/express.png"
-              alt="HTML5"
-              title="HTML5"
+              alt="Express"
+              title="Express"
             />
             <p></p>
           </div>
           <div class="icon-container icon2">
             <img
               src="./images/logos/backend/nodejs.png"
-              alt="Reactjs"
-              title="Reactjs"
+              alt="Nodejs"
+              title="Nodejs"
             />
           </div>
         </div>
       </section>
-      <!-- SKILLS SECTION OTROS -->
+
+      <!-- SKILLS SECTION DESIGN -->
       <section class="skills">
-        <h1 class="skills-title">Otros</h1>
+        <h1 class="skills-title">design</h1>
         <div class="others-container">
           <div class="icon-container icon">
             <img
@@ -257,15 +316,21 @@
               title="Figma"
             />
           </div>
-          <div class="icon-container icon">
+          <div class="icon-container icon2">
             <img
               src="./images/logos/github_logo_icon_181401.png"
-              alt="Figma"
-              title="Figma"
+              alt="Github"
+              title="Github"
             />
           </div>
         </div>
       </section>
+    </div>
+
+    <!-- Section : Contact -->
+    <div class="contact-container" id="contact">
+      <h2>Interedo en trabajar conmigo</h2>
+      <form action=""></form>
     </div>
     <!-- Script -->
     <script

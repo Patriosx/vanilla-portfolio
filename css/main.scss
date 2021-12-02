@@ -6,6 +6,7 @@
   --hero-subtitle: #b787b1;
   --hero-body: #365293;
   --color-1: #7073b6;
+  --orange: #ff6b35;
 }
 * {
   padding: 0;
@@ -84,6 +85,7 @@ button {
   }
   .nav-logo {
     font-weight: 600;
+    color: var(--orange);
   }
   .nav {
     ul {
@@ -91,8 +93,14 @@ button {
     }
     a {
       // display: block;
-      font-size: 0.9rem;
+      // font-size: 0.9rem;
       padding: 0 0.4em;
+      &:hover {
+        padding-bottom: 2px;
+        color: var(--orange);
+        transition: all 0.8s;
+        border-bottom: 2px solid var(--orange);
+      }
     }
   }
 }
@@ -114,21 +122,33 @@ button {
     text-align: center;
     letter-spacing: 2px;
     h1 {
+      border: 1px;
       // font-size: 3vh;
       // font-size: 2.2rem;
     }
-    h3 {
-      // font-size: 2vw;
-      margin-top: 2rem;
-      a {
-        color: var(--hero-subtitle);
-        // font-size: 1.2rem;
+
+    a {
+      color: var(--orange);
+      h3 {
+        margin-top: 1.8rem;
+      }
+      span {
         padding-bottom: 2px;
-        border-bottom: 2px solid #1b2f64;
+        border-bottom: 2px solid var(--orange);
       }
       ion-icon {
         transform: translateY(0.4em);
         color: yellow;
+      }
+      &:hover {
+        span {
+          border-bottom: 2px solid yellow;
+          transition: 1s;
+        }
+        ion-icon {
+          transform: translateY(20px);
+          transition: 1.2s;
+        }
       }
     }
   }
@@ -151,6 +171,9 @@ section {
     padding: 1rem;
     margin-top: 1rem;
     color: var(--hero-body);
+  }
+  img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .projects {
     .block-1 {
@@ -197,7 +220,8 @@ section {
 /* SKILLS SECTION */
 
 .skills {
-  background-color: #b787b1;
+  // background-color: #b787b1;
+  background-color: #000;
 
   .skills-title {
     padding: 1rem 0 2rem 0;
@@ -214,7 +238,8 @@ section {
     flex-wrap: wrap;
   }
   .icon-container {
-    height: 100px;
+    // height: 100px;
+    height: 60px;
     display: grid;
     place-content: center;
     margin: 0 auto;
@@ -225,30 +250,41 @@ section {
     border-radius: 1rem;
 
     &.icon {
-      width: 140px;
+      width: 100px;
     }
     &.icon2 {
-      width: 150px;
+      width: 110px;
     }
     &.icon3 {
-      width: 250px;
+      width: 200px;
     }
   }
 }
 .backend {
   background-color: white;
 }
+
+/* ABOUT SECTION */
+.about-container {
+  .about {
+    background-color: var(--orange);
+    color: white;
+  }
+}
+//////////////////////////////
 /* MEDIA QUERY*/
 @media only screen and (min-width: 680px) {
   header {
     padding: 2rem 2rem 2rem 8rem;
-    // font-size: 3vh;
+    font-size: 120%;
   }
   .hero-text {
     padding: 6rem;
     // font-size: 200%;
   }
-
+  .projects-title {
+    margin-bottom: 1rem;
+  }
   .projects {
     p {
       margin-bottom: 1rem;
@@ -263,7 +299,7 @@ section {
       .block-1 {
         display: grid;
         place-content: center;
-        padding: 2rem;
+        padding: 0 2rem;
 
         a {
           visibility: visible;
@@ -271,7 +307,7 @@ section {
         }
       }
       .block-2 {
-        padding: 2rem;
+        padding: 0 2rem;
       }
     }
     button {
@@ -304,8 +340,14 @@ section {
       justify-content: space-between;
       float: right;
       padding: 2rem;
+
       img {
         width: 30px;
+        border-radius: 50%;
+        &:hover {
+          background-color: var(--orange);
+          transition: all 1s;
+        }
       }
     }
   }
@@ -324,19 +366,25 @@ section {
       }
     }
     .hero-design {
-      // display: unset;
+      display: unset;
       margin-left: -50.4%;
       margin-top: 15%;
       width: 100%;
     }
   }
+  .projects-title {
+    margin-bottom: 0;
+  }
   .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .skills-container {
     flex-wrap: nowrap;
+
+    .skills-title {
+      padding: 0 0 3rem 0;
+    }
   }
+
   section {
     padding: 4rem;
   }

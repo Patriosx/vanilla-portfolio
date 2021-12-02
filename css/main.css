@@ -6,6 +6,7 @@
   --hero-subtitle: #b787b1;
   --hero-body: #365293;
   --color-1: #7073b6;
+  --orange: #ff6b35;
 }
 
 * {
@@ -101,6 +102,7 @@ button {
 
 .nav-container .nav-logo {
   font-weight: 600;
+  color: var(--orange);
 }
 
 .nav-container .nav ul {
@@ -110,8 +112,15 @@ button {
 }
 
 .nav-container .nav a {
-  font-size: 0.9rem;
   padding: 0 0.4em;
+}
+
+.nav-container .nav a:hover {
+  padding-bottom: 2px;
+  color: var(--orange);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  border-bottom: 2px solid var(--orange);
 }
 
 .social,
@@ -136,20 +145,40 @@ button {
   letter-spacing: 2px;
 }
 
-.hero-body .hero-text h3 {
-  margin-top: 2rem;
+.hero-body .hero-text h1 {
+  border: 1px;
 }
 
-.hero-body .hero-text h3 a {
-  color: var(--hero-subtitle);
+.hero-body .hero-text a {
+  color: var(--orange);
+}
+
+.hero-body .hero-text a h3 {
+  margin-top: 1.8rem;
+}
+
+.hero-body .hero-text a span {
   padding-bottom: 2px;
-  border-bottom: 2px solid #1b2f64;
+  border-bottom: 2px solid var(--orange);
 }
 
-.hero-body .hero-text h3 ion-icon {
+.hero-body .hero-text a ion-icon {
   -webkit-transform: translateY(0.4em);
           transform: translateY(0.4em);
   color: yellow;
+}
+
+.hero-body .hero-text a:hover span {
+  border-bottom: 2px solid yellow;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero-body .hero-text a:hover ion-icon {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 /* SECTION 1: PROJECTS*/
@@ -168,6 +197,11 @@ section {
   padding: 1rem;
   margin-top: 1rem;
   color: var(--hero-body);
+}
+
+.projects-container img {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .projects-container .projects .block-1 a {
@@ -212,7 +246,7 @@ section {
 */
 /* SKILLS SECTION */
 .skills {
-  background-color: #b787b1;
+  background-color: #000;
 }
 
 .skills .skills-title {
@@ -235,7 +269,7 @@ section {
 }
 
 .skills .icon-container {
-  height: 100px;
+  height: 60px;
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -247,28 +281,38 @@ section {
 }
 
 .skills .icon-container.icon {
-  width: 140px;
+  width: 100px;
 }
 
 .skills .icon-container.icon2 {
-  width: 150px;
+  width: 110px;
 }
 
 .skills .icon-container.icon3 {
-  width: 250px;
+  width: 200px;
 }
 
 .backend {
   background-color: white;
 }
 
+/* ABOUT SECTION */
+.about-container .about {
+  background-color: var(--orange);
+  color: white;
+}
+
 /* MEDIA QUERY*/
 @media only screen and (min-width: 680px) {
   header {
     padding: 2rem 2rem 2rem 8rem;
+    font-size: 120%;
   }
   .hero-text {
     padding: 6rem;
+  }
+  .projects-title {
+    margin-bottom: 1rem;
   }
   .projects p {
     margin-bottom: 1rem;
@@ -286,14 +330,14 @@ section {
     display: -ms-grid;
     display: grid;
     place-content: center;
-    padding: 2rem;
+    padding: 0 2rem;
   }
   .projects .project .block-1 a {
     visibility: visible;
     background-color: var(--hero-body);
   }
   .projects .project .block-2 {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   .projects button {
     visibility: hidden;
@@ -335,6 +379,12 @@ section {
   }
   .social ul img {
     width: 30px;
+    border-radius: 50%;
+  }
+  .social ul img:hover {
+    background-color: var(--orange);
+    -webkit-transition: all 1s;
+    transition: all 1s;
   }
   .hero-body {
     display: -ms-grid;
@@ -352,19 +402,24 @@ section {
     line-height: 1.2em;
   }
   .hero-body .hero-design {
+    display: unset;
     margin-left: -50.4%;
     margin-top: 15%;
     width: 100%;
+  }
+  .projects-title {
+    margin-bottom: 0;
   }
   .skills-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-  }
-  .skills-container {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .skills-container .skills-title {
+    padding: 0 0 3rem 0;
   }
   section {
     padding: 4rem;
