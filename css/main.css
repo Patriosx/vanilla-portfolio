@@ -97,7 +97,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .nav-container .nav-logo {
@@ -191,7 +191,7 @@ section {
 .projects-container .projects-title {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   padding: 1rem;
@@ -206,6 +206,29 @@ section {
 
 .projects-container .projects .block-1 a {
   visibility: hidden;
+}
+
+.projects-container .projects .p1 {
+  background-image: url("../images/projects/blomia-login.png");
+}
+
+.projects-container .projects .p2 {
+  background-image: url("../images/projects/omnifood.png");
+}
+
+.projects-container .projects .block-2 {
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-size: auto 100%;
+  -webkit-box-shadow: inset 0 0 0 500px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 500px rgba(0, 0, 0, 0.5);
+}
+
+.projects-container .projects .block-2:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-repeat: no-repeat;
 }
 
 .projects-container .projects .project-comp {
@@ -304,8 +327,8 @@ section {
 
 /* MEDIA QUERY*/
 @media only screen and (min-width: 680px) {
-  header {
-    padding: 2rem 2rem 2rem 8rem;
+  .nav-container header {
+    padding: 2rem 2rem 2rem 4rem;
     font-size: 120%;
   }
   .hero-text {
@@ -316,9 +339,6 @@ section {
   }
   .projects p {
     margin-bottom: 1rem;
-  }
-  .projects img {
-    width: 80%;
   }
   .projects .project {
     display: -ms-grid;
@@ -337,7 +357,7 @@ section {
     background-color: var(--hero-body);
   }
   .projects .project .block-2 {
-    padding: 0 2rem;
+    margin: auto;
   }
   .projects button {
     visibility: hidden;
@@ -404,7 +424,6 @@ section {
   .hero-body .hero-design {
     display: unset;
     margin-left: -50.4%;
-    margin-top: 15%;
     width: 100%;
   }
   .projects-title {
