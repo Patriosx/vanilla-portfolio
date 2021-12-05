@@ -321,8 +321,22 @@ section {
 
 /* ABOUT SECTION */
 .about-container .about {
-  background-color: var(--orange);
+  background-color: var(--nav-color2);
   color: white;
+  padding: 4rem 2rem;
+}
+
+.about-container .about .about-title {
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.about-container .about p {
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 /* MEDIA QUERY*/
