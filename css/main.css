@@ -417,6 +417,7 @@ section {
 }
 
 .contact-container form button {
+  cursor: pointer;
   color: var(--nav-text);
   font-weight: bolder;
   font-size: 1rem;
