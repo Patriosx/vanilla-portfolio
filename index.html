@@ -385,33 +385,41 @@
             method="POST"
           >
             <label for="name">your name</label>
-            <input type="text" name="" id="name" placeholder="name" required />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="name"
+              required
+            />
             <br />
             <label for="email">email</label>
             <input
               type="email"
-              name=""
+              name="email"
               id="email"
               placeholder="you@yourdomain.com"
               required
             />
             <br />
             <label for="message">message</label>
-            <!-- <input
-              type="text"
-              name=""
-              id=""
-              rows="10"
-              placeholder="how can I help?"
-            /> -->
             <textarea
               name="message"
               id="message"
               rows="10"
               placeholder="how can I help?"
+              required
             ></textarea>
-            <input type="hidden" name="_next" />
-            <input type="hidden" name="_subject" value="New email!" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://portfolio-patriciort.netlify.app/"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New email from your portfolio!"
+            />
             <button type="submit">Send</button>
           </form>
 
