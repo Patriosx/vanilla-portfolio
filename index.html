@@ -385,21 +385,28 @@
             method="POST"
           >
             <label for="name">your name</label>
-            <input type="text" name="" id="" placeholder="name" required />
+            <input type="text" name="" id="name" placeholder="name" required />
             <br />
             <label for="email">email</label>
             <input
-              type="text"
+              type="email"
               name=""
-              id=""
+              id="email"
               placeholder="you@yourdomain.com"
               required
             />
             <br />
             <label for="message">message</label>
-            <textarea
+            <!-- <input
+              type="text"
               name=""
               id=""
+              rows="10"
+              placeholder="how can I help?"
+            /> -->
+            <textarea
+              name="message"
+              id="message"
               rows="10"
               placeholder="how can I help?"
             ></textarea>

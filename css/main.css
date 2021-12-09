@@ -416,6 +416,10 @@ section {
   color: var(--nav-text);
 }
 
+.contact-container form #message {
+  word-break: break-word;
+}
+
 .contact-container form button {
   cursor: pointer;
   color: var(--nav-text);

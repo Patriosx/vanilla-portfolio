@@ -362,6 +362,10 @@ section {
       margin: 0.8rem 0 1.4rem;
       color: var(--nav-text);
     }
+    #message {
+      // height: 4rem;
+      word-break: break-word;
+    }
     button {
       cursor: pointer;
       color: var(--nav-text);
