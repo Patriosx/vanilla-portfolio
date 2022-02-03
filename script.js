@@ -17,7 +17,7 @@ btnScroll.addEventListener("click", (e) => {
 
 document.querySelector(".nav_links").addEventListener("click", function (e) {
   e.preventDefault();
-  //   console.log(e.target.classList);
+  console.log(e.target);
   if (e.target.classList.contains("nav-link")) {
     const id = e.target.getAttribute("href");
     console.log(id);

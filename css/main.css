@@ -158,23 +158,52 @@ img {
   border-bottom: 2px solid var(--orange);
 }
 
-.hero-body .hero-text a ion-icon {
-  -webkit-transform: translateY(0.4em);
-          transform: translateY(0.4em);
-  color: yellow;
-}
-
 .hero-body .hero-text a:hover span {
   border-bottom: 2px solid yellow;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.hero-body .hero-text a:hover ion-icon {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+.hero-body .hero-text a ion-icon {
+  -webkit-transform: translateY(0.4em);
+          transform: translateY(0.4em);
+  color: yellow;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
 }
 
 /* SECTION 1: PROJECTS*/
@@ -230,6 +259,10 @@ section {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-repeat: no-repeat;
+  -webkit-transition: background-repeat 1s, -webkit-box-shadow 1.5s;
+  transition: background-repeat 1s, -webkit-box-shadow 1.5s;
+  transition: box-shadow 1.5s, background-repeat 1s;
+  transition: box-shadow 1.5s, background-repeat 1s, -webkit-box-shadow 1.5s;
 }
 
 .projects-container .projects .project-comp {
@@ -346,6 +379,7 @@ section {
 
 /* FOOTER SECTION */
 .contact-container {
+  height: 100vh;
   padding: 2rem 0 2rem;
   background-color: var(--herobody-color);
   color: var(--nav-text);
@@ -414,10 +448,6 @@ section {
   border: 2px solid var(--nav-text);
   margin: 0.8rem 0 1.4rem;
   color: var(--nav-text);
-}
-
-.contact-container form #message {
-  word-break: break-word;
 }
 
 .contact-container form button {
@@ -583,6 +613,9 @@ section {
   }
   .about .about-text > div {
     padding: 2rem;
+  }
+  .contact-container section {
+    padding-right: 0;
   }
 }
 

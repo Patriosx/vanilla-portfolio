@@ -135,18 +135,29 @@ img {
         padding-bottom: 2px;
         border-bottom: 2px solid var(--orange);
       }
-      ion-icon {
-        transform: translateY(0.4em);
-        color: yellow;
-      }
       &:hover {
         span {
           border-bottom: 2px solid yellow;
           transition: 1s;
         }
-        ion-icon {
+      }
+      ion-icon {
+        transform: translateY(0.4em);
+        color: yellow;
+
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(5px);
+        }
+        50% {
           transform: translateY(20px);
-          transition: 1.2s;
+        }
+        100% {
+          transform: translateY(5px);
         }
       }
     }
@@ -199,6 +210,7 @@ section {
       &:hover {
         box-shadow: none;
         background-repeat: no-repeat;
+        transition: box-shadow 1.5s, background-repeat 1s;
       }
     }
     .project-comp {
@@ -312,9 +324,14 @@ section {
 /* FOOTER SECTION */
 /////////////////////////////////////////////
 .contact-container {
+  height: 100vh;
   padding: 2rem 0 2rem;
   background-color: var(--herobody-color);
   color: var(--nav-text);
+
+  // display: grid;
+  // justify-content: center;
+  // align-items: center;
   .mailto {
     &:hover {
       color: var(--color-2);
@@ -361,10 +378,6 @@ section {
       border: 2px solid var(--nav-text);
       margin: 0.8rem 0 1.4rem;
       color: var(--nav-text);
-    }
-    #message {
-      // height: 4rem;
-      word-break: break-word;
     }
     button {
       cursor: pointer;
@@ -527,6 +540,11 @@ section {
       }
     }
   }
+  .contact-container {
+    section {
+      padding-right: 0;
+    }
+  }
 }
 /////////////////////////////////////////////
 @media only screen and (min-width: 1350px) {
@@ -545,6 +563,7 @@ section {
     }
   }
 }
+/////////////////////////////////////////////
 @media only screen and (min-width: 1600px) {
   .projects {
     padding: 0 8rem 8rem;
