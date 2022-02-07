@@ -9,8 +9,8 @@
     <title>Patricio RT - Software Developer</title>
   </head>
   <body>
-    <div class="hero-container">
-      <div class="nav-container">
+    <sectin class="hero-container">
+      <nav class="nav-container">
         <header>
           <div class="nav-logo">Patricio RT</div>
           <div class="nav">
@@ -53,7 +53,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       <div class="hero-body">
         <div class="hero-text">
           <h1>Siempre en constante</h1>
@@ -121,12 +121,11 @@
           </svg>
         </div>
       </div>
-    </div>
-
+    </sectin>
     <!-- Section 1: Projects -->
-    <div class="projects-container" id="projects">
+    <section class="projects-container" id="projects">
       <h1 class="projects-title">Proyectos</h1>
-      <section class="projects">
+      <div class="projects">
         <div class="project-one project">
           <div class="block-1">
             <h2 class="project-comp">Viveros Blomia</h2>
@@ -182,7 +181,6 @@
             >
           </button>
         </div>
-
         <div class="project-two project">
           <div class="block-1">
             <h2 class="project-comp">Omnifood</h2>
@@ -227,40 +225,41 @@
             <a href="https://omnifood-prt.netlify.app/" target="_blank">Demo</a>
           </button>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <!-- Section : about me -->
-    <div class="about-container" id="about">
-      <section class="about">
+    <section class="about-container" id="about">
+      <div class="about">
         <h1 class="about-title">about me</h1>
         <div class="about-text">
           <div class="about-col1">
             <p>
               Hello! My name is Patricio. I'm a Software Developer, I describe
-              myself as someone who's persistent, a quick learner, and loves
-              problems solving by using simple and scalable solutions
+              myself as someone persistent, a quick learner, and love problems
+              solving by using simple and scalable solutions
             </p>
             <p>
               Besides coding I enjoy playing around with electronics and music,
-              I combine these two hobbies crafting guitar pedals
+              I combine these two hobbies crafting my own guitar pedals
             </p>
           </div>
           <div class="about-col2">
             <p>
-              3. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Pariatur, voluptas eos quas porro unde inventore nobis facilis qui
-              iusto voluptates sunt eum quia. Error, distinctio! Ipsam nam quas
-              maiores quaerat.
+              I have lived in four countries and right now I'm based in Gran
+              Canaria planning my next destination
+            </p>
+            <p>
+              I'm always looking for new challenges where I can keep developing
+              my skills and growing as a person
             </p>
           </div>
         </div>
-      </section>
-    </div>
-
+      </div>
+    </section>
     <!-- Section 2: Skills -->
-    <div class="skills-container" id="skills">
+    <section class="skills-container" id="skills">
       <!-- SKILLS SECTION FRONTEND -->
-      <section class="skills">
+      <div class="skills">
         <h1 class="skills-title">frontend</h1>
         <div class="frontend-container">
           <div class="icon-container icon">
@@ -307,7 +306,7 @@
             />
           </div>
         </div>
-      </section>
+      </div>
       <!-- SKILLS SECTION BACKEND -->
       <section class="skills backend">
         <h1 class="skills-title">backend</h1>
@@ -372,15 +371,16 @@
           </div>
         </div>
       </section>
-    </div>
-
+    </section>
     <!-- Section : Contact -->
-    <div class="contact-container" id="contact">
-      <section>
+    <section class="contact-container" id="contact">
+      <div class="contact-title-container">
         <h2 class="contact-title">GET IN TOUCH</h2>
+      </div>
+      <div class="contact">
         <div class="contact-content">
           <form
-            action="https://formsubmit.co/4beccbf45f941f6c40d11b647e281f1f "
+            action="https://formsubmit.co/p.rios1988@gmail.com"
             method="POST"
           >
             <label for="name">your name</label>
@@ -412,7 +412,7 @@
             <input
               type="hidden"
               name="_next"
-              value="https://portfolio-patriciort.netlify.app/"
+              value="https://patriciort.netlify.app/"
             />
             <input
               type="hidden"
@@ -423,7 +423,10 @@
           </form>
 
           <div class="social-footer">
-            <a class="mailto" href="mailto:p.rios1988@gmail.com">email me</a>
+            <a class="mailto" href="mailto:p.rios1988@gmail.com">
+              <ion-icon name="mail-outline"></ion-icon>
+              email me
+            </a>
             <ul>
               <li>
                 <a href="https://github.com/Patriosx" target="_blank">
@@ -450,8 +453,8 @@
             </ul>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <!-- Script -->
     <script
       type="module"

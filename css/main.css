@@ -207,7 +207,7 @@ img {
 }
 
 /* SECTION 1: PROJECTS*/
-section {
+.projects-container {
   padding: 0 2em;
   text-align: center;
   display: block;
@@ -304,9 +304,11 @@ section {
 /* SKILLS SECTION */
 .skills {
   background-color: #000;
+  padding: 4rem;
 }
 
 .skills .skills-title {
+  text-align: center;
   padding: 1rem 0 2rem 0;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -380,22 +382,49 @@ section {
 /* FOOTER SECTION */
 .contact-container {
   height: 100vh;
-  padding: 2rem 0 2rem;
   background-color: var(--herobody-color);
-  color: var(--nav-text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.contact-container .mailto:hover {
+.contact-container .contact-title {
+  padding: 2rem 0 0;
+  color: var(--nav-text);
+  text-align: center;
+}
+
+.contact-container .contact {
+  padding: 2rem 2rem 0;
+  color: var(--nav-text);
+  text-align: center;
+}
+
+.contact-container .contact .mailto ion-icon {
+  margin-bottom: -2px;
+}
+
+.contact-container .contact .mailto:hover {
   color: var(--color-2);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.contact-container .social-footer {
+.contact-container .contact .social-footer {
   margin-bottom: 1rem;
 }
 
-.contact-container .social-footer ul {
+.contact-container .contact .social-footer ul {
   margin: 0 auto;
   width: 250px;
   padding: 0.4rem;
@@ -409,7 +438,7 @@ section {
   background-color: white;
 }
 
-.contact-container .social-footer ul img {
+.contact-container .contact .social-footer ul img {
   width: 40px;
   border-radius: 50%;
   background-color: var(--nav-text);
@@ -425,23 +454,19 @@ section {
           justify-content: center;
 }
 
-.contact-container .social-footer ul img:hover {
+.contact-container .contact .social-footer ul img:hover {
   background-color: var(--color-2);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-.contact-container .contact-title {
-  padding: 1rem;
-}
-
-.contact-container form {
+.contact-container .contact form {
   text-align: left;
 }
 
-.contact-container form input,
-.contact-container form textarea,
-.contact-container form button {
+.contact-container .contact form input,
+.contact-container .contact form textarea,
+.contact-container .contact form button {
   width: 100%;
   padding: 1rem;
   background-color: var(--herobody-color);
@@ -450,7 +475,7 @@ section {
   color: var(--nav-text);
 }
 
-.contact-container form button {
+.contact-container .contact form button {
   cursor: pointer;
   color: var(--nav-text);
   font-weight: bolder;
@@ -458,7 +483,7 @@ section {
   margin-top: 0;
 }
 
-.contact-container form button:hover {
+.contact-container .contact form button:hover {
   color: var(--color-2);
   border: 2px solid var(--color-2);
   -webkit-transition: 1s;
@@ -506,10 +531,13 @@ section {
   .projects-container .projects button {
     visibility: hidden;
   }
+  .contact {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 1190px) {
-  section {
+  .projects-container {
     padding: 4rem;
   }
   .hero-container {
@@ -589,6 +617,9 @@ section {
   .skills-container .skills-title {
     padding: 0 0 3rem 0;
   }
+  .contact-container .contact {
+    padding: 4rem 0 0 4rem;
+  }
   .contact-container .contact-content {
     display: -ms-grid;
     display: grid;
@@ -614,7 +645,7 @@ section {
   .about .about-text > div {
     padding: 2rem;
   }
-  .contact-container section {
+  .contact-container {
     padding-right: 0;
   }
 }
