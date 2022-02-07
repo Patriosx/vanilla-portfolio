@@ -143,6 +143,7 @@ img {
 
 .hero-body .hero-text h1 {
   border: 1px;
+  font-size: 3rem;
 }
 
 .hero-body .hero-text a {
@@ -244,6 +245,10 @@ img {
 
 .projects-container .projects .p2 {
   background-image: url("../images/projects/omnifood.png");
+}
+
+.projects-container .projects .p3 {
+  background-image: url("../images/projects/buenapizza.PNG");
 }
 
 .projects-container .projects .block-2 {

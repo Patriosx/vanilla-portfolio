@@ -49,7 +49,6 @@ img {
 
 .btn {
   // visibility: hidden;
-
   position: relative;
   font-size: 0.8rem;
   background: transparent;
@@ -124,6 +123,7 @@ img {
 
     h1 {
       border: 1px;
+      font-size: 3rem;
     }
 
     a {
@@ -199,6 +199,9 @@ img {
     }
     .p2 {
       background-image: url("../images/projects/omnifood.png");
+    }
+    .p3 {
+      background-image: url("../images/projects/buenapizza.PNG");
     }
     .block-2 {
       height: 400px;
