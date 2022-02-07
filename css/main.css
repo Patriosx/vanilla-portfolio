@@ -386,7 +386,7 @@ img {
 
 /* FOOTER SECTION */
 .contact-container {
-  height: 100vh;
+  height: 100%;
   background-color: var(--herobody-color);
   display: -webkit-box;
   display: -ms-flexbox;
